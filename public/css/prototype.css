@@ -1,0 +1,36 @@
+html{
+    width: 100%;
+    margin: 0;
+}
+
+body{
+    background-image: url("/images/beanstalk.png");
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#section-home h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif !important;
+    max-width: 800px;
+}
+#section-home b{
+    color: #1ABC9C;
+}
+
+header .menu-items a:hover{
+    color: #1ABC9C !important;
+}
+
+#proto-form #message{
+    resize: none;
+}
+
+#proto-form form{
+    max-width: 870px;
+}
+
+#copyrights{
+    text-align: center;
+}
+
+

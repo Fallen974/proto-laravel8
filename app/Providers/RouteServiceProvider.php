@@ -17,7 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    //public const HOME = '/dashboard';
+    public const HOME = '/backend';
 
     /**
      * The controller namespace for the application.
@@ -33,6 +34,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
     public function boot()
     {
         $this->configureRateLimiting();

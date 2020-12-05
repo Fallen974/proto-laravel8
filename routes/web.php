@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home');
 });
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/backend',function () {
+    return view('pages.backend');
+})->name('backend');
+
