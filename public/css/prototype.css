@@ -33,4 +33,12 @@ header .menu-items a:hover{
     text-align: center;
 }
 
+.proto{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
 

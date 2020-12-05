@@ -43,8 +43,9 @@
 
 </header>
 
-<div class="container clearfix">
+<div class="container clearfix proto">
     @yield('content1')
+    <div style="height: 2px; background: black"></div>
 </div>
 
 

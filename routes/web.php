@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServicesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/backend',function () {
     return view('pages.backend');
 })->name('backend');
 
+
+Route::resource('services', ServicesController::class);
+Route::get('/backend', 'App\Http\Controllers\ServicesController@index');
+Route::get('/backend/services/create', 'App\Http\Controllers\ServicesController@create');
+Route::post('/backend/services/create', 'App\Http\Controllers\ServicesController@store');
+Route::get('/backend/services/edit/{id}', 'App\Http\Controllers\ServicesController@edit');
+Route::post('/backend/services/edit/{id}', 'App\Http\Controllers\ServicesController@update');
