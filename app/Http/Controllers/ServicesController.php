@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
+    public function getdb()
+    {
+        $data = Services::orderBy('id', 'asc')->paginate(10)->setPath('/backend/services');
+        return view('pages.home',compact('data'));
+    }
     /**
      * Display a listing of the resource.
      *
@@ -56,7 +61,7 @@ class ServicesController extends Controller
     public function show($id)
     {
         $data = Services::find($id);
-        return view('pages.backend',compact('data'));
+        return view('pages.services.services',compact('data'));
     }
 
     /**

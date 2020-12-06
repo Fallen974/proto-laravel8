@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class CrewController extends Controller
 {
+    public function getdb()
+    {
+        $crewdata = Crew::orderBy('id', 'asc')->paginate(10)->setPath('/backend/crew');
+        return view('pages.home',compact('crewdata'));
+    }
     /**
      * Display a listing of the resource.
      *

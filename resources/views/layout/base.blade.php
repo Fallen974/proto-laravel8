@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/css/prototype.css" rel="stylesheet">
+    <link href="/css/slick.css" rel="stylesheet">
+    <link href="/css/slick-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
@@ -34,23 +37,76 @@
 
     </header>
 
-    <div class="container clearfix">
-        @yield('content')
+    <div class="container">
+        @yield('content-home')
+        @yield('content-about')
+        @yield('content-form')
     </div>
 
 
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
     <footer id="copyrights">
         <p>&copy; Copyright Julien BASQUE 2020</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+    <script src="/js/slick.js" type="application/javascript"></script>
+
     <script src="/js/bootstrap.js"></script>
+    <script src="/js/prototype.js" type="application/javascript"></script>
+    <script>
+        $(document).ready(function (){
+            $('.multiple-items').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                arrows: false,
+                responsive:[
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            autoplay: true,
+                            arrows: false
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            autoplay: true,
+                            arrows: false
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            autoplay: true,
+                            arrows: false
+                        }
+                    },
+                ]
+            });
+
+        })
+    </script>
+
 
 </body>
 </html>

@@ -1,11 +1,46 @@
 @extends('layout.base')
 
-@section('content')
-    <div id="section-home" style="background: #ffd8d3">
-        <h2 class="mx-auto">Prototype OnePage réalisé en&nbsp;<b>Laravel</b>&nbsp;un framework PHP</h2>
-    </div>
 
-    <div id="section-about" style="background: #ffd8d3">
+
+@section('content-home')
+    <div id="section-home">
+        <h2 class="mx-auto">Prototype OnePage réalisé en&nbsp;<b>Laravel</b>&nbsp;un framework PHP</h2>
+        <div class="multiple-items">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Titre</b></h4>
+                    <h5 class="card-title">Sous titre</h5>
+                    <a href="#" class="btn btn-secondary">Voir plus</a>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Titre</b></h4>
+                    <h5 class="card-title">Sous titre</h5>
+                    <a href="#" class="btn btn-secondary">Voir plus</a>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Titre</b></h4>
+                    <h5 class="card-title">Sous titre</h5>
+                    <a href="#" class="btn btn-secondary">Voir plus</a>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-body">
+                    <h4 class="card-title"><b>Titre</b></h4>
+                    <h5 class="card-title">Sous titre</h5>
+                    <a href="#" class="btn btn-secondary">Voir plus</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+@endsection
+
+@section('content-about')
+    <div id="section-about">
         <div id="header-section-about" data-aos="fade-right">
             <h2>Une équipe expérimentée à vos cotés</h2>
             <p><i>Basée à la Réunion, notre équipe de développeurs
@@ -13,12 +48,28 @@
                     sur-mesure, de site internet et d'API.</i> | <a href="https://bnb.re">En savoir plus</a></p>
         </div>
         <div id="body-section-about">
-
+            <div class="container">
+                <div class="row">
+                    @foreach($crewdata as $members)
+                        <div class="col-sm-4" data-aos="flip-left" data-aos-duration="1500">
+                            <div class="card text-center proto-card">
+                                <img class="card-img-top" src="{{ URL::asset('images/'.$members->crewPicture) }}" alt="Card image cap" width="300" height="370">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{$members->crewLastName}} {{$members->crewFirstName}}</h4>
+                                    <h5 class="card-title">{{$members->crewJob}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
 
     </div>
+@endsection
 
-    <div id="proto-form" style="background: #ffd8d3">
+@section('content-form')
+    <div id="proto-form">
         <h2>Formulaire de contact</h2>
         <div class="d-flex justify-content-center">
             <form>

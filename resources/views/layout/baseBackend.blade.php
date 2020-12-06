@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
 
 
+
     <title>Prototype Laravel 8 | Backend</title>
 </head>
 
@@ -22,7 +23,7 @@
         </button>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto menu-items">
-                <a class="nav-item nav-link" href="#">Utilisateurs</a>
+                <a class="nav-item nav-link" href="/backend/users">Utilisateurs</a>
                 <a class="nav-item nav-link" href="/backend/services">Services</a>
                 <a class="nav-item nav-link" href="/backend/crew">Equipe</a>
                 <li class="nav-item">
@@ -48,7 +49,6 @@
 </header>
 
 <div class="container clearfix proto">
-    <h2 class="text-center">Bienvenue dans l'espace d'administration!</h2>
     @yield('content')
 </div>
 

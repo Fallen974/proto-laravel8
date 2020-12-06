@@ -1,7 +1,8 @@
 @extends('layout.baseBackend')
 
 @section('content')
-    <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='#'">
+    <h2 class="text-center">Bienvenue dans l'espace d'administration!</h2>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='/backend/users'">
         Espace CRUD Utilisateurs
     </button>
     <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='/backend/services'">

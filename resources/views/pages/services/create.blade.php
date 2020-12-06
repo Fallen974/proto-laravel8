@@ -23,7 +23,7 @@
             @endif
             <div class="d-flex justify-content-between">
                 <button type="submit" class="btn btn-primary">Créer</button>
-                <button type="button" class="btn btn-primary" onclick="window.location.href='/backend'">Précedent</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='/backend/services'">Précedent</button>
             </div>
         </form>
     </div>
