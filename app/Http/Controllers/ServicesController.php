@@ -14,8 +14,8 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $data = Services::orderBy('id', 'asc')->paginate(10)->setPath('/backend');
-        return view('pages.backend',compact('data'));
+        $data = Services::orderBy('id', 'asc')->paginate(10)->setPath('/backend/services');
+        return view('pages.services.services',compact('data'));
     }
 
     /**

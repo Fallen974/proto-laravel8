@@ -1,52 +1,16 @@
 @extends('layout.baseBackend')
 
-@section('content1')
-
-    <h2>Liste des services</h2>
-    <div class="col-md-12">
-
-        <div class="table-responsive">
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Titre</th>
-                        <th>Sous-Titre</th>
-                        <th>Lien</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                @foreach($data as $row)
-                    <tr>
-                        <td>{{$row->id }}</td>
-                        <td>{{$row->serviceName }}</td>
-                        <td>{{$row->serviceSubname }}</td>
-                        <td>{{$row->serviceLink }}</td>
-
-                        <td><a href="{{ url('/backend/services/edit', $row->id)}}" class="btn btn-primary">Modifier</a></td>
-                        <td>
-                            <form action="{{ route('services.destroy', $row->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-danger" type="submit">Supprimer</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-                <tr>
-                    <td>
-                        <button class="btn btn-secondary" onclick="window.location.href='/backend/services/create'">Creer un nouveau service</button>
-                    </td>
-
-                </tr>
-                </tbody>
-
-            </table>
-        </div>
-        <div>
-
-        </div>
-    </div>
-
+@section('content')
+    <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='#'">
+        Espace CRUD Utilisateurs
+    </button>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='/backend/services'">
+        Espace CRUD Services
+    </button>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='/backend/crew'">
+        Espace CRUD Crew
+    </button>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="window.location.href='/'">
+        Retour à l'accueil
+    </button>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layout.baseBackend')
 
-@section('content1')
+@section('content')
     <div class="container mt-5">
         <form method="POST" action="{{url('/backend/services/edit',$data->id)}}">
             @csrf

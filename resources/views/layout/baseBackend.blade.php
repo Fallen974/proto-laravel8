@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/prototype.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
@@ -15,12 +16,15 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Prototype | Backend</a>
+        <a class="navbar-brand" href="/backend">Prototype | Backend</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto menu-items">
+                <a class="nav-item nav-link" href="#">Utilisateurs</a>
+                <a class="nav-item nav-link" href="/backend/services">Services</a>
+                <a class="nav-item nav-link" href="/backend/crew">Equipe</a>
                 <li class="nav-item">
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,8 +48,8 @@
 </header>
 
 <div class="container clearfix proto">
-    @yield('content1')
-    <div style="height: 2px; background: black"></div>
+    <h2 class="text-center">Bienvenue dans l'espace d'administration!</h2>
+    @yield('content')
 </div>
 
 
