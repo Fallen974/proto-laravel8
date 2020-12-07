@@ -13,11 +13,11 @@
                 <input type="text" class="form-control" name="name" value="{{$usersdata->name}}">
             </div>
             <div class="form-group">
-                <label>Sous Titre</label>
+                <label>Email</label>
                 <input type="text" class="form-control" name="email" value="{{$usersdata->email}}">
             </div>
             <div class="form-group">
-                <label>Lien</label>
+                <label>Mot de passe</label>
                 <input type="password" class="form-control" name="password" value="{{$usersdata->password}}">
             </div>
             @if (session('success'))
